@@ -5,6 +5,7 @@
 #include "krs.h"
 #include "MapParamDlg.h"
 #include "DlgSelectChannel.h"
+#include "DlgSelectAttr.h"
 #include "NewCorrespondenceDlg.h"
 #include "BS.h"
 #include "FORMULA.h"

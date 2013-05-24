@@ -708,28 +708,6 @@ BEGIN
     EDITTEXT        IDC_EDIT_JUMP_DOWN,144,156,35,14,ES_AUTOHSCROLL
 END
 
-IDD_DIALOG_DEBUG DIALOGEX 0, 0, 336, 157
-STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Отладочная информация"
-FONT 8, "MS Sans Serif", 0, 0, 0x0
-BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,279,7,50,14
-    PUSHBUTTON      "Cancel",IDCANCEL,279,24,50,14
-    EDITTEXT        IDC_EDIT_MEX_INTERVAL,144,7,44,12,ES_AUTOHSCROLL
-    LTEXT           "Интервал для механической скорости",IDC_STATIC,10,9,131,8
-    LTEXT           "м",IDC_STATIC,192,9,8,8
-    EDITTEXT        IDC_EDIT_MEX_INTERVAL2,144,23,44,12,ES_AUTOHSCROLL
-    LTEXT           "Интервал для СПО",IDC_STATIC,10,25,65,8
-    LTEXT           "сек",IDC_STATIC,192,25,13,8
-    EDITTEXT        IDC_EDIT_POROG_MOMENT,103,64,44,12,ES_AUTOHSCROLL
-    LTEXT           "Порог момента на роторе",IDC_STATIC,10,65,89,8
-    LTEXT           "сек",IDC_STATIC,151,66,13,8,NOT WS_VISIBLE
-    EDITTEXT        IDC_EDIT_VES_ROTOR_BUR,103,80,44,12,ES_AUTOHSCROLL
-    LTEXT           "Уставка для веса",IDC_STATIC,10,81,62,8
-    LTEXT           "сек",IDC_STATIC,151,82,13,8,NOT WS_VISIBLE
-    GROUPBOX        "Роторное бурение",IDC_STATIC,7,47,164,53
-END
-
 IDD_INIT_CIRCULIACIYA DIALOGEX 0, 0, 304, 183
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Время"
@@ -1543,14 +1521,6 @@ BEGIN
         BOTTOMMARGIN, 171
     END
 
-    IDD_DIALOG_DEBUG, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 329
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 150
-    END
-
     IDD_INIT_CIRCULIACIYA, DIALOG
     BEGIN
         LEFTMARGIN, 7
@@ -1900,16 +1870,13 @@ BEGIN
     END
     POPUP "Настройки"
     BEGIN
-        MENUITEM "Начальные настройки",         ID_START_PROPERTY
         MENUITEM "Настройки базы данных",       ID_MENU_PROP_DB
         MENUITEM "Настройки сети",              ID_MENU_TCPIT
-        MENUITEM "Настройки интерфейса",        ID_MENU_INTERFACE
         MENUITEM SEPARATOR
         MENUITEM "Настройка каналов",           ID_PARAMETRY
         MENUITEM "Калибровка",                  ID_KALIBROVKA_M
         MENUITEM "Конфигурация устройств",      ID_CONFIG_DEVICES
         MENUITEM "Настройка блоков отображения", ID_BLOCK_OTOBRAZHENIYA
-        MENUITEM "Дополнительные параметы",     ID_DEBUG_INFO
         MENUITEM SEPARATOR
         MENUITEM "Сохранение настроек устройств", ID_DOWNLOAD_MEM
         MENUITEM "Восстановление настроек устройств", ID_UPLOAD_MEM

@@ -88,6 +88,7 @@ DlgCalibrNew::DlgCalibrNew(CParam *param, CWnd* pParent /*=NULL*/)
 	
 	if (g_param->m_attr_channel_num != -1)
 	{
+		/*
 		SERV_Channel* channel;
 		cfg = (g_param->m_attr_channel_conv_num == 0) ? &m_convertor_cfg : SERV_current_device_cfg;
 		if (cfg == NULL)
@@ -115,8 +116,20 @@ DlgCalibrNew::DlgCalibrNew(CParam *param, CWnd* pParent /*=NULL*/)
 //			EndDialog(IDCANCEL);
 //			return FALSE;
 		}
-		int pw = 0x03 & (WORD)channel->GetLastValue();
-		g_param_k = (int)pow(10, (float)pw);
+		*/
+	//	int pw = 0x03 & (WORD)channel->GetLastValue();
+		if (g_param->m_attr_channel_conv_num==1)
+			g_param_k = (int)pow(10, (float)1);
+		if (g_param->m_attr_channel_conv_num==2)
+			g_param_k = (int)pow(10, (float)2);
+		if (g_param->m_attr_channel_conv_num==3)
+			g_param_k = (int)pow(10, (float)3);
+		if (g_param->m_attr_channel_conv_num==4)
+			g_param_k = (int)pow(10, (float)4);
+		if (g_param->m_attr_channel_conv_num==5)
+			g_param_k = (int)pow(10, (float)5);
+		if (g_param->m_attr_channel_conv_num==6)
+			g_param_k = (int)pow(10, (float)6);
 	}
 	else
 		g_param_k = 1;

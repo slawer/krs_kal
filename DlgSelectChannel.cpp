@@ -5,6 +5,7 @@
 #include "krs.h"
 #include "MainFrm.h"
 #include "DlgSelectChannel.h"
+
 #include <SERV.h>
 
 #ifdef _DEBUG
@@ -81,7 +82,7 @@ BOOL DlgSelectChannel::OnInitDialog()
 	SERV_Device* device = &m_convertor_device;
 	SERV_Channel* channel;
 	SERV_ChannelsMap::iterator end_s, current_s;
-
+/*
 	if (m_allow_convertor)
 	{
 		branch_item = m_channels_tree.InsertItem("Каналы конвертора", 0, 0);
@@ -96,6 +97,7 @@ BOOL DlgSelectChannel::OnInitDialog()
 			current_s++;
 		}
 	}
+	*/
 	branch_item = m_channels_tree.InsertItem("Внутренняя конфигурация", 0, 0);
 	m_channels_tree.SetItemData(branch_item, 0x01FFFF);
 	SERV_DevicesMap::iterator current_d = SERV_current_device_cfg->GetDevicesBegin();

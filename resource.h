@@ -53,7 +53,6 @@
 #define IDB_BITMAP_CFG                  160
 #define IDD_DIALOG_EDIT_SENSOR          163
 #define IDC_CURSOR2                     168
-#define IDD_DIALOG_DEBUG                169
 #define IDD_INIT_CIRCULIACIYA           170
 #define IDD_DIALOG_SETTINGS_BO          171
 #define IDD_DIALOG_EDIT_TEXT            173
@@ -300,16 +299,12 @@
 #define IDC_EDIT_DATA_LEN               1115
 #define IDC_COMBO_POINT                 1116
 #define IDC_EDIT_DSP1                   1116
-#define IDC_EDIT_MEX_INTERVAL           1117
 #define IDC_EDIT_DSP0                   1117
-#define IDC_EDIT_MEX_INTERVAL2          1118
 #define IDC_EDIT_TIME_CIRCULIACII_START 1118
 #define IDC_EDIT_TIME_BURENIYA_START    1119
 #define IDC_STATIC_REGIM_INDICATOR      1119
-#define IDC_EDIT_POROG_MOMENT           1119
 #define IDC_EDIT_POROG_TIME             1120
 #define IDC_EDIT_MEX_INTERVAL4          1120
-#define IDC_EDIT_VES_ROTOR_BUR          1120
 #define IDC_EDIT_POROG_VISOTA           1121
 #define IDC_STATIC_TEST                 1121
 #define IDC_STATIC_TESTT                1122

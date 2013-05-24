@@ -18,7 +18,7 @@ public:
 
 // Dialog Data
 	//{{AFX_DATA(CDlgDebagParam)
-	enum { IDD = IDD_DIALOG_DEBUG };
+//	enum { IDD = IDD_DIALOG_DEBUG };
 	double	m_MexInterval;
 	double	m_SPOInterval;
 	double	m_PorogRotorBur;

@@ -8,6 +8,7 @@
 #include "MainFrm.h"
 #include "NewCorrespondenceDlg.h"
 #include "DlgSelectChannel.h"
+#include "DlgSelectAttr.h"
 #include "FormulaEditDlg.h"
 #include <check.h>
 
@@ -378,14 +379,15 @@ void NewCorrespondenceDlg::OnButtonChooseNothing()
 
 void NewCorrespondenceDlg::OnButtonChooseAttr() 
 {
-	DlgSelectChannel dlg("Выберите канал атрибута", true);
+//	DlgSelectChannel dlg("Выберите канал атрибута", true);
+	DlgSelectAttr dlg("Выберите канал атрибута", true);
 
-	dlg.m_convertor_id = m_attr_channel_conv;
-	dlg.m_channel_id = m_attr_channel_num;
+	dlg.m_convertor_id =m_attr_channel_num ;
+	dlg.m_channel_id = m_attr_channel_conv;
 
 	if (dlg.DoModal() == IDCANCEL)
 		return;
-
+/*
 	SERV_DeviceCfg* cfg = (dlg.m_convertor_id == 0)?&m_convertor_cfg:SERV_current_device_cfg;
 	if (cfg != NULL)
 	{
@@ -394,8 +396,13 @@ void NewCorrespondenceDlg::OnButtonChooseAttr()
 			return;
 		SetDlgItemText(IDC_EDIT_CHANNEL_ATTR, channel->GetInfo());
 	}
-	m_attr_channel_num = dlg.m_channel_id;
-	m_attr_channel_conv = dlg.m_convertor_id;
+	*/
+	if (dlg.m_channel_id>5)
+		return;
+	if (dlg.m_convertor_id!=1)
+		return;
+	m_attr_channel_num = dlg.m_convertor_id;
+	m_attr_channel_conv =dlg.m_channel_id;
 }
 
 void NewCorrespondenceDlg::OnButtonChooseNothingAttr() 

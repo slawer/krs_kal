@@ -715,7 +715,9 @@ void CKRSApp::ReadParamFromRegistry(CParam *pParam)
 	if (pParam->m_attr_channel_num < 1)
 		pParam->m_attr_channel_num = -1;
 	pParam->m_attr_channel_conv_num = ReadIntegerValueFromRegistry(sn, "m_attr_channel_conv_num", 0);
-	if (pParam->m_attr_channel_conv_num != 1)
+//	if (pParam->m_attr_channel_conv_num != 1)
+
+	if (pParam->m_attr_channel_conv_num >5)
 		pParam->m_attr_channel_conv_num = 0;
 	pParam->m_shown_digits = ReadIntegerValueFromRegistry(sn, "m_shown_digits", pParam->m_shown_digits);
 	pParam->m_shown_digits = max(0, min(6, pParam->m_shown_digits));

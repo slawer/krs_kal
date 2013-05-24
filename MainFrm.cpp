@@ -22,9 +22,10 @@
 
 #include "DlgKalibrovka.h"
 #include "DlgSelectChannel.h"
+#include "DlgSelectAttr.h"
 #include "DlgSelectMarkerType.h"
 #include "DlgConfigDevices.h"
-#include "DlgDebagParam.h"
+//	#include "DlgDebagParam.h"
 #include "DlgSettingsBO.h"
 #include "DlgStageSettings.h"
 #include "DlgWaitDB.h"
@@ -2586,8 +2587,8 @@ void CMainFrame::OnUpdateMenuConfigDevices(CCmdUI *pCmdUI)
 
 void CMainFrame::OnDebugInfo() 
 {
-	CDlgDebagParam dlg;
-	dlg.DoModal();
+//	CDlgDebagParam dlg;
+//	dlg.DoModal();
 }
 
 void CMainFrame::OnSettingsBO() 

@@ -842,32 +842,6 @@
 				>
 			</File>
 			<File
-				RelativePath="DlgDebagParam.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="DlgDebagParam.h"
-				>
-			</File>
-			<File
 				RelativePath=".\DlgDevicesMemory.cpp"
 				>
 			</File>
@@ -1241,6 +1215,14 @@
 			</File>
 			<File
 				RelativePath=".\DlgPanelCement.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DlgSelectAttr.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\DlgSelectAttr.h"
 				>
 			</File>
 			<File
@@ -1670,6 +1652,92 @@
 				RelativePath="res\KRSDoc.ico"
 				>
 			</File>
+			<Filter
+				Name="Graph files"
+				>
+				<File
+					RelativePath="Graph.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							AdditionalIncludeDirectories=""
+							PreprocessorDefinitions=""
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							AdditionalIncludeDirectories=""
+							PreprocessorDefinitions=""
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="Graph.h"
+					>
+				</File>
+				<File
+					RelativePath="HeaderGrf.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							AdditionalIncludeDirectories=""
+							PreprocessorDefinitions=""
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							AdditionalIncludeDirectories=""
+							PreprocessorDefinitions=""
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="HeaderGrf.h"
+					>
+				</File>
+				<File
+					RelativePath="Indicftor.cpp"
+					>
+					<FileConfiguration
+						Name="Release|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							AdditionalIncludeDirectories=""
+							PreprocessorDefinitions=""
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							AdditionalIncludeDirectories=""
+							PreprocessorDefinitions=""
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="Indicftor.h"
+					>
+				</File>
+				<File
+					RelativePath="RingBuff.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Help Files"
@@ -2259,92 +2327,6 @@
 			</File>
 			<File
 				RelativePath="StdAfx.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="Graph files"
-			>
-			<File
-				RelativePath="Graph.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="Graph.h"
-				>
-			</File>
-			<File
-				RelativePath="HeaderGrf.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="HeaderGrf.h"
-				>
-			</File>
-			<File
-				RelativePath="Indicftor.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="Indicftor.h"
-				>
-			</File>
-			<File
-				RelativePath="RingBuff.h"
 				>
 			</File>
 		</Filter>

@@ -5,6 +5,7 @@
 #include "ArgConstDlg.h"
 #include "DlgFormulasList.h"
 #include "DlgSelectChannel.h"
+#include "DlgSelectAttr.h"
 #include "MainFrm.h"
 #include "TXT.h"
 #include "ChangeParam.h"

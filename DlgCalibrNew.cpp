@@ -399,10 +399,12 @@ BOOL DlgCalibrNew::OnInitDialog()
 
 	CKRSApp* app = (CKRSApp*)AfxGetApp();
 	g_table_list.m_scaling = (app->ReadIntegerValueFromRegistry("Settings","калибровка.масштабирование", g_table_list.m_scaling?1:0) == 1);
-	CheckDlgButton(IDC_CHECK_SCALE, g_table_list.m_scaling);
+	//CheckDlgButton(IDC_CHECK_SCALE, g_table_list.m_scaling);
 	g_table_list.m_calc_outer_points = (app->ReadIntegerValueFromRegistry("Settings","калибровка.рассчёт", g_table_list.m_calc_outer_points?1:0) == 1);
-	CheckDlgButton(IDC_CHECK_CALC_OUTER, g_table_list.m_calc_outer_points);
-	
+//	CheckDlgButton(IDC_CHECK_CALC_OUTER, g_table_list.m_calc_outer_points);
+	CheckDlgButton(IDC_CHECK_SCALE, false);
+	CheckDlgButton(IDC_CHECK_CALC_OUTER, true);
+
 	SetTimer(2, 100, NULL);
 	return TRUE;
 }

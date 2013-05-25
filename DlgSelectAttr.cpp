@@ -101,6 +101,7 @@ BOOL DlgSelectAttr::OnInitDialog()
 	
 //	branch_item = m_channels_tree.InsertItem("Внутренняя конфигурация", 0, 0);
 	branch_item = m_channels_tree.InsertItem("Позиция десятичной точки ", 0, 0);
+	
 
 	m_channels_tree.SetItemData(branch_item, 0x01FFFF);
 	/*
@@ -124,7 +125,7 @@ BOOL DlgSelectAttr::OnInitDialog()
 	}
 	*/
 	device_item = m_channels_tree.InsertItem("Смещение слева:", 1, 1, branch_item);
-		
+
 	m_channels_tree.SetItemData(device_item, 0x0100FF | 1);
 
 	channel_item = m_channels_tree.InsertItem("1", 2, 2, device_item);
@@ -146,6 +147,8 @@ BOOL DlgSelectAttr::OnInitDialog()
 	channel_item = m_channels_tree.InsertItem("5", 2, 2, device_item);
 	m_channels_tree.SetItemData(channel_item, 0x010000 | 5);
 	m_channels_tree.Expand(device_item, TVE_EXPAND);
+	m_channels_tree.Expand(branch_item, TVE_EXPAND);
+	m_channels_tree.Expand(channel_item, TVE_EXPAND);
 
 /*
 	DWORD data = 0xFFFFFF;

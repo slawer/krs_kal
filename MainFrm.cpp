@@ -675,7 +675,7 @@ float CParam::GetCurrentValue(byte &status)
 				val = channel->GetLastValue();
 
 				if (m_attr_channel_num != -1)
-				{
+				{/*
 					cfg = (m_attr_channel_conv_num == 0) ? g_convertor_cfg : SERV_current_device_cfg;
 					if (cfg == NULL)
 					{
@@ -691,6 +691,21 @@ float CParam::GetCurrentValue(byte &status)
 						return fCurAvg;
 					}
 					attr_koeff = (float)pow(10.0, -(0x03 & (WORD)(attr_channel->GetLastValue())));
+					val *= attr_koeff;
+					*/
+					if (m_attr_channel_conv_num==1)
+						attr_koeff = (float)pow(10.0, -(WORD)1);
+					if (m_attr_channel_conv_num==2)
+						attr_koeff = (float)pow(10.0, -(WORD)2);
+					if (m_attr_channel_conv_num==3)
+						attr_koeff = (float)pow(10.0, -(WORD)3);
+					if (m_attr_channel_conv_num==4)
+						attr_koeff = (float)pow(10.0, -(WORD)4);
+					if (m_attr_channel_conv_num==5)
+						attr_koeff = (float)pow(10.0, -(WORD)5);
+					if (m_attr_channel_conv_num==6)
+						attr_koeff = (float)pow(10.0, -(WORD)6);
+			//		attr_koeff = (float)pow(10.0, -(0x03 & (WORD)(attr_channel->GetLastValue())));
 					val *= attr_koeff;
 				}
 				fCur = val;

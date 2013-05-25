@@ -403,9 +403,10 @@ void NewCorrespondenceDlg::OnButtonChooseAttr()
 		return;
 	m_attr_channel_num = dlg.m_convertor_id;
 	m_attr_channel_conv =dlg.m_channel_id;
+	UpdateParamInfo();
 }
 
-void NewCorrespondenceDlg::OnButtonChooseNothingAttr() 
+void NewCorrespondenceDlg::OnButtonChooseNothingAttr()	// сброс канала аттрибута
 {
 	m_attr_channel_num = -1;
 	m_attr_channel_conv = 0;
@@ -499,6 +500,13 @@ void NewCorrespondenceDlg::SetChannelText(UINT id, int conv_num, int channel_num
 	SERV_Channel* channel = cfg->GetChannel(channel_num);
 	SetDlgItemText(id, (channel == NULL) ? BS_GetChannelName(NULL) : channel->GetInfo());
 }
+/*
+void NewCorrespondenceDlg::SetAttrText(UINT id, int conv_num, int channel_num)
+{
+//	SetDlgItemText(id, (channel == NULL) ? BS_GetChannelName(NULL) : channel->GetInfo());
+	SetDlgItemText(id, (channel == NULL) ? BS_GetChannelName(NULL) : channel->GetInfo());
+}
+*/
 
 void NewCorrespondenceDlg::UpdateParamInfo()
 {
@@ -525,7 +533,25 @@ void NewCorrespondenceDlg::UpdateParamInfo()
 		if (m_param_type == PARAM_TYPE_FORMULA)
 			SetDlgItemText(IDC_EDIT_CHANNEL, (m_formula==NULL) ? "- формула не указана - " : m_formula->GetText(FORMULA_MODE_TEMPLATE));
 		if (m_param_type == PARAM_TYPE_CHANNEL)
-			SetChannelText(IDC_EDIT_CHANNEL_ATTR, m_attr_channel_conv, m_attr_channel_num);
+		{
+			if (m_attr_channel_num==-1)
+				SetDlgItemText(IDC_EDIT_CHANNEL_ATTR, "- канал не указан -");
+			else
+			{
+				CString str="- ошибка в аттрибуте -";
+				if (m_attr_channel_conv==1) 
+					str="- 1 знак после зап€той -";
+				if (m_attr_channel_conv==2) 
+					str="- 2 знака после зап€той -";	
+				if (m_attr_channel_conv==3) 
+					str="- 3 знака после зап€той -";
+				if (m_attr_channel_conv==4) 
+					str="- 4 знака после зап€той -";
+				if (m_attr_channel_conv==5) 
+					str="- 5 знаков после зап€той -";
+				SetDlgItemText(IDC_EDIT_CHANNEL_ATTR, str);		
+			}
+		}
 		else
 		if (m_param_type == PARAM_TYPE_FORMULA)
 			SetDlgItemText(IDC_EDIT_CHANNEL_ATTR, (m_formula==NULL) ? "- формула не указана - " : m_formula->GetText(FORMULA_MODE_RESULT));

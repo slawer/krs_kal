@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KRS6.0.67", "KRS.vcproj", "{9C58314A-B6D0-4E92-9638-4570675ABDEE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KRS", "KRS.vcproj", "{9C58314A-B6D0-4E92-9638-4570675ABDEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

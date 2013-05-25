@@ -571,6 +571,40 @@ CString GetXChannelName(CParam* param, int num, int conv_num)
 	return channel->GetExtendedInfo();
 }
 
+CString GetXAttrName(CParam* param, int num, int conv_num)
+{
+	/*
+	if (SERV_current_device_cfg == NULL)
+		return "- внутренняя ошибка (SERV_current_device_cfg == NULL) -";
+	SERV_Channel *channel = SERV_current_device_cfg->GetChannel(num);
+	if (channel == NULL)
+	{
+		CString str;
+		str.Format("- несуществующий канал %d устройства %d -", num & 0xFF, num>>8);
+		return str;
+	}
+	return channel->GetExtendedInfo();
+	*/
+	CString str="- ошибка в аттрибуте -";
+	
+	if (conv_num==1)
+		str="- 1 знак после запятой -";
+	if (conv_num==2)
+		str="- 2 знака после запятой -";
+	if (conv_num==3)
+		str="- 3 знака после запятой -";
+	if (conv_num==4)
+		str="- 4 знака после запятой -";
+	if (conv_num==5)
+		str="- 5 знаков после запятой -";
+	
+
+	
+	// str.Format("- %d  %d %d  %d -", num, conv_num, num & 0xFF, num>>8);
+
+	return str;
+}
+
 CString BS_GetChannelName(CParam* param)
 {
 	return GetXChannelName(param, (param == NULL)?0:param->m_channel_num, (param == NULL)?0:param->m_channel_conv_num);
@@ -578,7 +612,16 @@ CString BS_GetChannelName(CParam* param)
 
 CString BS_GetAttrChannelName(CParam* param)
 {
-	return GetXChannelName(param, (param == NULL)?0:param->m_attr_channel_num, (param == NULL)?0:param->m_attr_channel_conv_num);
+//	return str.Format("- несуществующий канал %d устройства %d -", num & 0xFF, num>>8);
+//	return str.Format("- несуществующий канал %d устройства %d -", num & 0xFF, num>>8);
+
+//	return "- запятая 1";
+//	return GetXAttrName(param, (param == NULL)?0:param->m_channel_num, (param == NULL)?0:param->m_channel_conv_num);
+
+	return GetXAttrName(param, (param == NULL)?0:param->m_attr_channel_num, (param == NULL)?0:param->m_attr_channel_conv_num);
+
+
+//	return GetXChannelName(param, (param == NULL)?0:param->m_attr_channel_num, (param == NULL)?0:param->m_attr_channel_conv_num);
 }
 
 CString BS_FloatWOZeros(double f, int precision)
